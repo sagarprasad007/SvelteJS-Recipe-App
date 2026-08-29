@@ -1,4 +1,4 @@
-import { c as ensure_array_like, a as attr, e as escape_html } from "../../../chunks/root.js";
+import { h as ensure_array_like, a as attr, e as escape_html } from "../../../chunks/root.js";
 import { r as recipeStore } from "../../../chunks/recipes.svelte.js";
 import { f as favoritesStore } from "../../../chunks/favorites.svelte.js";
 import "@sveltejs/kit/internal";

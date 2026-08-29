@@ -9,52 +9,17 @@ const DAYS = [
   "Saturday",
   "Sunday"
 ];
-const MEAL_TYPES = ["Breakfast", "Lunch", "Dinner", "Snack"];
+const MEAL_TYPES = ["Breakfast", "Lunch", "Snack", "Dinner"];
 function getInitialPlan() {
-  const defaultPlan = {
-    "Monday": {
-      "Breakfast": "m2",
-      "Lunch": "m4",
-      "Dinner": "m1",
-      "Snack": null
-    },
-    "Tuesday": {
+  const defaultPlan = {};
+  for (const day of DAYS) {
+    defaultPlan[day] = {
       "Breakfast": null,
-      "Lunch": "m5",
-      "Dinner": "m3",
-      "Snack": null
-    },
-    "Wednesday": {
-      "Breakfast": "m2",
       "Lunch": null,
-      "Dinner": "m5",
-      "Snack": "m6"
-    },
-    "Thursday": {
-      "Breakfast": null,
-      "Lunch": "m1",
-      "Dinner": "m4",
-      "Snack": null
-    },
-    "Friday": {
-      "Breakfast": "m2",
-      "Lunch": "m3",
-      "Dinner": "m1",
-      "Snack": "m6"
-    },
-    "Saturday": {
-      "Breakfast": null,
-      "Lunch": "m5",
-      "Dinner": "m3",
-      "Snack": null
-    },
-    "Sunday": {
-      "Breakfast": "m2",
-      "Lunch": "m4",
-      "Dinner": "m6",
-      "Snack": null
-    }
-  };
+      "Snack": null,
+      "Dinner": null
+    };
+  }
   if (typeof window === "undefined") return defaultPlan;
   const stored = localStorage.getItem("rf_meal_planner");
   return stored ? JSON.parse(stored) : defaultPlan;
@@ -110,8 +75,8 @@ class PlannerStore {
       this.plan[day] = {
         "Breakfast": null,
         "Lunch": null,
-        "Dinner": null,
-        "Snack": null
+        "Snack": null,
+        "Dinner": null
       };
     }
     this.plan[day][mealType] = recipeId;
@@ -133,8 +98,8 @@ class PlannerStore {
       cleared[day] = {
         "Breakfast": null,
         "Lunch": null,
-        "Dinner": null,
-        "Snack": null
+        "Snack": null,
+        "Dinner": null
       };
     }
     this.plan = cleared;

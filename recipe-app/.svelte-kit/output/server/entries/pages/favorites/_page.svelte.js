@@ -1,4 +1,4 @@
-import { c as ensure_array_like, a as attr } from "../../../chunks/root.js";
+import { h as ensure_array_like, a as attr } from "../../../chunks/root.js";
 import "@sveltejs/kit/internal";
 import "../../../chunks/exports.js";
 import "../../../chunks/utils2.js";

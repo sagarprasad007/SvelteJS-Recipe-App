@@ -436,7 +436,7 @@
   }
 
   @media print {
-    rf-navbar, .action-bar, .breadcrumb, rf-modal, .toast-banner, .app-footer {
+    :global(rf-navbar), .action-bar, .breadcrumb, :global(rf-modal), :global(.toast-banner), :global(.app-footer) {
       display: none !important;
     }
     .detail-hero, .section-card {

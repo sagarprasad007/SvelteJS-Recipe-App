@@ -126,7 +126,7 @@
       "_state.svelte.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.CUDHVfh5.css"
+      "_app/immutable/assets/_layout.Cpwv4AeA.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -143,7 +143,7 @@
       "_favorites.svelte.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.kbZIhNQg.css"
+      "_app/immutable/assets/_page.B6aoniqi.css"
     ]
   },
   "src/routes/favorites/+page.svelte": {
@@ -176,7 +176,7 @@
       "_planner.svelte.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.o7Y367gX.css"
+      "_app/immutable/assets/_page.DtpDOzxr.css"
     ]
   },
   "src/routes/my-recipes/+page.svelte": {
@@ -209,7 +209,7 @@
       "_planner.svelte.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.Dr1FRAVD.css"
+      "_app/immutable/assets/_page.DYRLBeEF.css"
     ]
   },
   "virtual:__sveltekit/env": {

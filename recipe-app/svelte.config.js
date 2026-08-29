@@ -5,7 +5,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
   preprocess: vitePreprocess(),
   compilerOptions: {
-    // Svelte 5 runes mode enabled by default in Svelte 5
+    // Svelte 5 runes mode enabled by default
   },
   kit: {
     adapter: adapter(),

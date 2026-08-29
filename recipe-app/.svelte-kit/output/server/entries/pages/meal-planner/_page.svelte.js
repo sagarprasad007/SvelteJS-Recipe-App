@@ -1,4 +1,4 @@
-import { e as escape_html, c as ensure_array_like, f as attr_class, a as attr } from "../../../chunks/root.js";
+import { e as escape_html, h as ensure_array_like, b as attr_class, a as attr } from "../../../chunks/root.js";
 import "@sveltejs/kit/internal";
 import "../../../chunks/exports.js";
 import "../../../chunks/utils2.js";
@@ -18,7 +18,7 @@ function _page($$renderer, $$props) {
       const all = [...recipeStore.userRecipes, ...recipeStore.apiRecipes];
       return all.find((r) => r.id === recipeId) || null;
     }
-    $$renderer2.push(`<div class="container"><div class="planner-header svelte-w5949r"><div><h1 class="page-title">Weekly Meal Planner</h1> <p class="page-subtitle">Organize your weekly nutrition, assign recipes to daily slots, and track preparation time.</p></div> <div class="header-actions"><button class="btn btn-secondary">Clear Entire Week</button></div></div> <div class="stats-bar svelte-w5949r"><div class="stat-box svelte-w5949r"><span class="box-num svelte-w5949r">${escape_html(plannerStore.totalPlannedMeals)}</span> <span class="box-label svelte-w5949r">Total Meals Planned</span></div> <div class="stat-box svelte-w5949r"><span class="box-num svelte-w5949r">${escape_html(plannerStore.totalPrepTimeMins)} mins</span> <span class="box-label svelte-w5949r">Est. Weekly Prep Time</span></div> <div class="stat-box svelte-w5949r"><span class="box-num svelte-w5949r">${escape_html((plannerStore.totalPrepTimeMins / 60).toFixed(1))} hrs</span> <span class="box-label svelte-w5949r">Kitchen Time Total</span></div></div> <div class="planner-matrix svelte-w5949r"><!--[-->`);
+    $$renderer2.push(`<div class="container"><div class="planner-header svelte-w5949r"><div><h1 class="page-title">Weekly Meal Planner</h1> <p class="page-subtitle">Organize your weekly nutrition, assign recipes to daily slots, and track preparation time.</p></div> <div class="header-actions svelte-w5949r"><button class="btn btn-secondary">Clear Entire Week</button></div></div> <div class="stats-bar svelte-w5949r"><div class="stat-box svelte-w5949r"><span class="box-num svelte-w5949r">${escape_html(plannerStore.totalPlannedMeals)}</span> <span class="box-label svelte-w5949r">Total Meals Planned</span></div> <div class="stat-box svelte-w5949r"><span class="box-num svelte-w5949r">${escape_html(plannerStore.totalPrepTimeMins)} mins</span> <span class="box-label svelte-w5949r">Est. Weekly Prep Time</span></div> <div class="stat-box svelte-w5949r"><span class="box-num svelte-w5949r">${escape_html((plannerStore.totalPrepTimeMins / 60).toFixed(1))} hrs</span> <span class="box-label svelte-w5949r">Kitchen Time Total</span></div></div> <div class="planner-matrix svelte-w5949r"><!--[-->`);
     const each_array = ensure_array_like(DAYS);
     for (let $$index_1 = 0, $$length = each_array.length; $$index_1 < $$length; $$index_1++) {
       let day = each_array[$$index_1];
