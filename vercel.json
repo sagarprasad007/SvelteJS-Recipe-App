@@ -1,4 +1,4 @@
 {
-  "buildCommand": "cd recipe-components && npm install && npm run build && npm pack && cp recipe-finder-ui-components-1.0.1.tgz ../recipe-app/ && mkdir -p ../recipe-app/static/stencil && cp -r dist/recipe-finder-ui-components/* ../recipe-app/static/stencil/ && cd ../recipe-app && npm install --force ./recipe-finder-ui-components-1.0.1.tgz && npm run build",
+  "buildCommand": "npm run vercel-build",
   "outputDirectory": "recipe-app/build"
 }

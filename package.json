@@ -2,7 +2,9 @@
   "name": "svelte-recipe-workspace",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "cd recipe-components && npm install && npm run build && npm pack && cd ../recipe-app && npm install && npm run build"
+    "build": "node scripts/build-all.js",
+    "vercel-build": "node scripts/build-all.js"
   }
 }
