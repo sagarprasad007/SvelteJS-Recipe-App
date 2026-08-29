@@ -3,6 +3,7 @@
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
   import { toastStore } from '$lib/stores/toast.svelte.js';
+  import { defineCustomElements } from 'recipe-finder-ui-components/loader';
   import '../app.css';
 
   let { children } = $props();
@@ -10,16 +11,13 @@
   let activePath = $derived($page.url.pathname);
   let theme = $state('light');
 
-  onMount(async () => {
+  onMount(() => {
     const savedTheme = localStorage.getItem('rf_theme') || 'light';
     theme = savedTheme;
     document.documentElement.setAttribute('data-theme', theme);
 
-    try {
-      const { defineCustomElements } = await import('recipe-finder-ui-components/loader');
+    if (typeof window !== 'undefined') {
       defineCustomElements(window);
-    } catch (e) {
-      console.warn('Custom element loader initialization fallback:', e);
     }
   });
 
