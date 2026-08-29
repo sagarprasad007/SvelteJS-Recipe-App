@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -8,7 +8,13 @@ const config = {
     // Svelte 5 runes mode enabled by default
   },
   kit: {
-    adapter: adapter(),
+    adapter: adapter({
+      pages: 'public',
+      assets: 'public',
+      fallback: 'index.html',
+      precompress: false,
+      strict: true
+    }),
     alias: {
       '$lib': 'src/lib',
       '$lib/*': 'src/lib/*'
