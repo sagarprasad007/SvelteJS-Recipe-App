@@ -1,0 +1,33 @@
+'use strict';
+
+var index = require('./index-Chboh0pd.js');
+
+const rfNavbarCss = () => `:host{display:block;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;position:sticky;top:0;z-index:1000}.navbar{background:rgba(255, 255, 255, 0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(226, 232, 240, 0.8);box-shadow:0 4px 20px rgba(0, 0, 0, 0.03);transition:background 0.3s ease, border-color 0.3s ease}:host-context([data-theme="dark"]) .navbar{background:rgba(21, 28, 44, 0.85);border-bottom-color:#27354a;box-shadow:0 4px 20px rgba(0, 0, 0, 0.25)}.navbar-container{max-width:1280px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#0f172a}.brand-logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg, #6366f1, #8b5cf6);color:#ffffff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(99, 102, 241, 0.3)}.brand-logo svg{width:22px;height:22px}.brand-name{font-size:1.35rem;font-weight:800;letter-spacing:-0.02em;background:linear-gradient(135deg, #0f172a, #334155);-webkit-background-clip:text;-webkit-text-fill-color:transparent}:host-context([data-theme="dark"]) .brand-name{background:linear-gradient(135deg, #f8fafc, #cbd5e1);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.nav-menu{display:flex;align-items:center;gap:8px}.nav-link{display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;text-decoration:none;font-size:0.9rem;font-weight:600;color:#64748b;transition:all 0.2s ease}:host-context([data-theme="dark"]) .nav-link{color:#94a3b8}.nav-link svg{width:18px;height:18px}.nav-link:hover{background:#f1f5f9;color:#4f46e5}:host-context([data-theme="dark"]) .nav-link:hover{background:#1e293b;color:#818cf8}.nav-link.active{background:rgba(99, 102, 241, 0.1);color:#6366f1}:host-context([data-theme="dark"]) .nav-link.active{background:rgba(99, 102, 241, 0.2);color:#818cf8}@media (max-width: 768px){.nav-link span{display:none}.nav-link{padding:10px}}.nav-actions{display:flex;align-items:center;gap:12px}`;
+
+const RfNavbar = class {
+    constructor(hostRef) {
+        index.registerInstance(this, hostRef);
+        this.rfNavigate = index.createEvent(this, "rfNavigate");
+        this.brandName = 'TasteCraft';
+        this.activeRoute = '/';
+        this.navigate = (path, e) => {
+            e.preventDefault();
+            this.rfNavigate.emit({ path });
+        };
+    }
+    render() {
+        const navItems = [
+            { path: '/', label: 'Discover', icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' },
+            { path: '/my-recipes', label: 'My Recipes', icon: 'M12 6v6m0 0v6m0-6h6m-6 0H6' },
+            { path: '/favorites', label: 'Favorites', icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' },
+            { path: '/meal-planner', label: 'Meal Planner', icon: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' },
+        ];
+        return (index.h("header", { key: 'd7320e2c80702f21434591a5c30008ef7fe80f55', class: "navbar" }, index.h("div", { key: 'ba87b90df707a5a06e87c4276b38555d255bbcfb', class: "navbar-container" }, index.h("a", { key: '0c10f4919d1057dc7199123f43431b09f4132b7b', href: "/", class: "brand", onClick: (e) => this.navigate('/', e) }, index.h("slot", { key: '57c21d51768d6360f2e77e8339a83f0b417a081a', name: "brand" }, index.h("div", { key: '94a6a46579c14f6f0c993f89271348f220b40c47', class: "brand-logo" }, index.h("svg", { key: '94a98e1220ada5ab7c70a98e614fb08fadd32595', viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": "2.5" }, index.h("path", { key: 'b0db5eb3db05f2b600065e2e6b3ac3950d9a2336', d: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" }))), index.h("span", { key: '16bda27bc10d4e32f02958ea0e15d579621602c0', class: "brand-name" }, this.brandName))), index.h("nav", { key: 'cda1253874f8284bc856bcdfc54c6b471b95fa94', class: "nav-menu" }, navItems.map(item => {
+            const isActive = this.activeRoute === item.path || (item.path !== '/' && this.activeRoute.startsWith(item.path));
+            return (index.h("a", { href: item.path, class: `nav-link ${isActive ? 'active' : ''}`, onClick: (e) => this.navigate(item.path, e) }, index.h("svg", { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": "2" }, index.h("path", { d: item.icon, "stroke-linecap": "round", "stroke-linejoin": "round" })), index.h("span", null, item.label)));
+        })), index.h("div", { key: 'ea71cc738cc0a316fd7abc00caa106fb470c7804', class: "nav-actions" }, index.h("slot", { key: '5c3e0946cdd27987c83e0f9baa06a54b7219dbcb', name: "actions" })))));
+    }
+};
+RfNavbar.style = rfNavbarCss();
+
+exports.rf_navbar = RfNavbar;

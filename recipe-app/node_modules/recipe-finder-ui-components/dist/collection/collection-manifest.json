@@ -1,0 +1,18 @@
+{
+  "entries": [
+    "components/rf-badge/rf-badge.js",
+    "components/rf-modal/rf-modal.js",
+    "components/rf-navbar/rf-navbar.js",
+    "components/rf-rating/rf-rating.js",
+    "components/rf-recipe-card/rf-recipe-card.js",
+    "components/rf-search-bar/rf-search-bar.js"
+  ],
+  "mixins": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "4.44.2",
+    "typescriptVersion": "5.8.3"
+  },
+  "collections": [],
+  "bundles": []
+}

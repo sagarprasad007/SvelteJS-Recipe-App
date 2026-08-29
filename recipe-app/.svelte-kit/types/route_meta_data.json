@@ -1,0 +1,18 @@
+{
+	"/": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/favorites": [
+		"src/routes/+layout.js"
+	],
+	"/meal-planner": [
+		"src/routes/+layout.js"
+	],
+	"/my-recipes": [
+		"src/routes/+layout.js"
+	],
+	"/recipes/[id]": [
+		"src/routes/+layout.js"
+	]
+}
