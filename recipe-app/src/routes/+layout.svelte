@@ -15,11 +15,13 @@
     theme = savedTheme;
     document.documentElement.setAttribute('data-theme', theme);
 
-    try {
-      const { defineCustomElements } = await import('recipe-finder-ui-components/loader');
-      defineCustomElements(window);
-    } catch (e) {
-      console.warn('Custom element registration:', e);
+    if (typeof window !== 'undefined') {
+      try {
+        const { defineCustomElements } = await import('recipe-finder-ui-components/loader');
+        defineCustomElements(window, { resourcesUrl: '/stencil/' });
+      } catch (e) {
+        console.warn('Custom element registration:', e);
+      }
     }
   });
 
