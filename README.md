@@ -4,7 +4,7 @@ A modern, enterprise-grade fullstack web application built with **Svelte 5** (ut
 
 ---
 
-## Deliverables & Submission Links
+## Links
 
 | Deliverable | URL / Reference |
 | :--- | :--- |
