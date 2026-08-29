@@ -1,4 +1,3 @@
 {
-  "buildCommand": "cd recipe-components && npm install && npm run build && npm pack && cp recipe-finder-ui-components-1.0.0.tgz ../recipe-app/ && cd ../recipe-app && npm install && npm run build",
-  "outputDirectory": "recipe-app/public"
+  "buildCommand": "cd recipe-components && npm install && npm run build && npm pack && cp recipe-finder-ui-components-1.0.1.tgz ../recipe-app/ && cd ../recipe-app && npm install --force ./recipe-finder-ui-components-1.0.1.tgz && npm run build"
 }

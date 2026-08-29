@@ -21,6 +21,6 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
-    "recipe-finder-ui-components": "file:recipe-finder-ui-components-1.0.0.tgz"
+    "recipe-finder-ui-components": "file:recipe-finder-ui-components-1.0.1.tgz"
   }
 }
