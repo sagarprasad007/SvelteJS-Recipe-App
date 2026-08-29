@@ -17,10 +17,21 @@
 
     if (typeof window !== 'undefined') {
       try {
-        const { defineCustomElements } = await import('recipe-finder-ui-components/loader');
-        defineCustomElements(window, { resourcesUrl: '/stencil/' });
+        const { defineCustomElement: defineNavbar } = await import('recipe-finder-ui-components/dist/components/rf-navbar.js');
+        const { defineCustomElement: defineSearchBar } = await import('recipe-finder-ui-components/dist/components/rf-search-bar.js');
+        const { defineCustomElement: defineRecipeCard } = await import('recipe-finder-ui-components/dist/components/rf-recipe-card.js');
+        const { defineCustomElement: defineBadge } = await import('recipe-finder-ui-components/dist/components/rf-badge.js');
+        const { defineCustomElement: defineModal } = await import('recipe-finder-ui-components/dist/components/rf-modal.js');
+        const { defineCustomElement: defineRating } = await import('recipe-finder-ui-components/dist/components/rf-rating.js');
+
+        defineNavbar();
+        defineSearchBar();
+        defineRecipeCard();
+        defineBadge();
+        defineModal();
+        defineRating();
       } catch (e) {
-        console.warn('Custom element registration:', e);
+        console.error('Custom element registration error:', e);
       }
     }
   });
