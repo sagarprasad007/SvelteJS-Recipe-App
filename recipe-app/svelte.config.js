@@ -9,11 +9,8 @@ const config = {
   },
   kit: {
     adapter: adapter({
-      pages: 'public',
-      assets: 'public',
       fallback: 'index.html',
-      precompress: false,
-      strict: true
+      strict: false
     }),
     alias: {
       '$lib': 'src/lib',
