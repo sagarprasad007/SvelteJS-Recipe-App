@@ -5,6 +5,7 @@ node_modules/
 # SvelteKit build output & generated ambient types
 .svelte-kit/
 build/
+public/
 dist/
 
 # Local environment & system files
