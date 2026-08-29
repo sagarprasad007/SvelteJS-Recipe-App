@@ -1,0 +1,15 @@
+# Node modules & dependencies
+node_modules/
+*.tgz
+
+# SvelteKit build output & generated ambient types
+.svelte-kit/
+build/
+dist/
+
+# Local environment & system files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

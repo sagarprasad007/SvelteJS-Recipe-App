@@ -1,1 +1,0 @@
-import{S as n,z as c}from"./CQ1_TAHT.js";function a(r,t,i){var s=r==null?"":""+r;return t&&(s=s?s+" "+t:t),s===""?null:s}function v(r,t,i,s,u,f){var l=r[n];if(c||l!==i||l===void 0){var e=a(i,s);(!c||e!==r.getAttribute("class"))&&(e==null?r.removeAttribute("class"):r.className=e),r[n]=i}return f}export{v as s};
